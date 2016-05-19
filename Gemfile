@@ -53,3 +53,6 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
 end
 
+#12 factor goodness
+gem 'rails_12factor', group: :production
+
