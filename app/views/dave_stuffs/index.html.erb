@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dave Stuffs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Saying</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dave_stuffs.each do |dave_stuff| %>
+      <tr>
+        <td><%= dave_stuff.saying %></td>
+        <td><%= link_to 'Show', dave_stuff %></td>
+        <td><%= link_to 'Edit', edit_dave_stuff_path(dave_stuff) %></td>
+        <td><%= link_to 'Destroy', dave_stuff, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dave Stuff', new_dave_stuff_path %>

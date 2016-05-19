@@ -1,0 +1,2 @@
+class DaveStuff < ApplicationRecord
+end
