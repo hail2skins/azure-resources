@@ -1,2 +1,0 @@
-class DaveStuff < ApplicationRecord
-end
