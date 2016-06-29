@@ -11,6 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160629033046) do
+
+  create_table "computers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.string   "resourcegroupname"
+    t.index ["name"], name: "index_computers_on_name", using: :btree
+    t.index ["resourcegroupname"], name: "index_computers_on_resourcegroupname", using: :btree
+  end
+
+  create_table "dave_stuffs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "saying"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["saying"], name: "index_dave_stuffs_on_saying", using: :btree
+  end
 
 end

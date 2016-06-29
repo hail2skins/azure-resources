@@ -56,3 +56,8 @@ end
 #12 factor goodness
 gem 'rails_12factor', group: :production
 
+gem 'azure_mgmt_storage'
+gem 'azure_mgmt_compute'
+gem 'azure_mgmt_resources'
+gem 'azure_mgmt_network'
+
